@@ -1,42 +1,69 @@
-new Vue({
-    /* edtmc^2w */
-    el: '',
-    data: {
-      /* 인스턴스 안에서 사용되는 변수 등록, 공유 변수 */
-      /* data 프로퍼티 값 변경시 this.set(object, key, value) 을 사용 */
+import React from 'react';
+import { BrowserRouter, MemoryRouter, HashRouter, Router } from 'react-router-dom';
+import { render, screen, fireEvent } from '@testing-library/react';
+import { createMemoryHistory } from 'history';
+import 'jest-styled-components';
+import '@testing-library/jest-dom';
 
-    },
-    //template: ``,
-    methods: {
-      /* 이벤트 핸들러 등록 + 일반 함수 */
+describe('aa 테스트', () => {
+  beforeAll((done) => {
+    // This code will be called just once before all it statements
+    done();
+  });
+  beforeEach((done) => {
+    // This code will be called many times before all it statements
+    done();
+  });
+  afterAll((done) => {
+    // This code will be called just once after all it statements
+    done();
+  });
+  afterEach((done) => {
+    // This code will be called many times after all it statements
+    done();
+  });
 
-    },
-    components: {
-      /* 전역 컴포넌트인 경우는 등록하지 않는다. 전역 컴포넌트는 프로토타입 체인으로 찾을 수 있기 때문에 */
-      /* 지역 컴포넌트나 파일 컴포넌트만 등록 한다. 예시) "태그명" : 컴포넌트명 */
+  // https://github.com/testing-library/jest-dom
+  // Assertion Matcher
+  // . expect(OBJECT).toBe()                   : 기본 타입 값 비교
+  // . expect(OBJECT).toBeCloseTo()            : 기본 타입 값을 근사치로 비교
+  // . expect(OBJECT).not                      : 불일치 여부 확인
+  // . expect(OBJECT).toEqual()                : 객체 타입 값 비교
+  // . expect(OBJECT).toStrictEqual()          : 객체 타입 값 비교
+  // . expect(OBJECT).toBeNull()               : null 여부 만 확인
+  // . expect(OBJECT).toBeUndefined()          : undefined 여부 만 확인
+  // . expect(OBJECT).toBeDefined()            : toBeUndefined의 반대 경우 확인
+  // . expect(OBJECT).toBeTruthy()             : true로 취급되는 구문을 확인
+  // . expect(OBJECT).toBeFalsy()              : false로 취급되는 구문을 확인
+  // . expect(OBJECT).toBeGreaterThan()         : 큰 숫자 여부 확인
+  // . expect(OBJECT).toBeGreaterThanOrEqual() : 같거나 큰 숫자 여부 확인
+  // . expect(OBJECT).toBeLessThan()           : 작은 숫자 여부 확인
+  // . expect(OBJECT).toBeLessThanOrEqual()    : 같거나 작은 숫자 여부 확인
+  // . expect(OBJECT).toMatch()                : 정규식을 이용해서 문자열의 일치 여부 확인
+  // . expect(OBJECT).toContain()              : Array 또는 iteration이 가능한 (Set, Map 등...) 객체에 특정 요소 포함 여부를 확인
+  // . expect(OBJECT).toThrow()                : 에러 발생 여부 확인
 
-    },
-    computed: {
-      /* 자동처리 + 동기식. 변수명이 메서드 명이다. 메서드로 작성. return 필수.  data 와 공존 불가 */
+  // Testing Queries 메서드 >>> https://testing-library.com/docs/queries/about/
+  // . screen.getByText() : DOM 에서 text로 찾기
+  // . screen.getAllByText() : DOM 에서 text로 찾기
+  // . screen.getByAltText()
+  // . screen.getByPlaceholderText()
+  // . screen.getElementsByClassName()
+  // . screen.getElementsByTagName()
+  // . screen.queryByText()
 
-    },
-    watch: {
-      /* 자동처리 + 비동기식. data 에 등록된 프로퍼티(변수) 모니터링. 메서드로 작성. 매개변수 필수. 외부 api 호출을 위해서 사용 */
+  // element 중요 메서드
+  // . getAttribute()
+  // . toHaveStyleRule()
+  // . toHaveLength()
+  // . toHaveAttribute()
+  // . toHaveTextContent()
 
-    },
-    created() {
-      console.log("created");
-    },
-    mounted() {
-      console.log("mounted");
-    },
-    updated() {
-      console.log("updated");
-    },
+  // 이벤트 발생 객체
+  // . fireEvent()
+
+  test('', (done) => {
+    // Assertions
+    done();
+  });
 });
-
-"Print to console":{
-  "scope":"javascript,typescript",
-  "previx":"sejong",
-  "body"":
-}
