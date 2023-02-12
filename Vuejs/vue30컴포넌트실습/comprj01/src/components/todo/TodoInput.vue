@@ -125,7 +125,7 @@ export default {
   data() {
     /* 컴포넌트 안에서 사용되는 변수 등록. 개별 변수 */
     return {
-      newTodoItem: null,
+      newTodoItem: null /* 입력된 값 */,
       showModal: false,
     };
   },
@@ -134,6 +134,21 @@ export default {
     addTodo(e) {
       console.log(e.target);
       debugger;
+
+      // 1. 확인 emit 부모 자식 연결이 되는지 확인
+      // 2. addTodo 기능 완성.
+      //   2-1. newTodoItem 이 빈값인 경우 넘기지 않도록 코딩.
+      //        null 이 아니고
+      //        undefined 아니고
+      //        빈 문자열이 아니고
+      //        공백이 아니고
+      //   2-2. TodoInput 컴포넌트의 input 태그에 값을 초기화
+      if (this.$data.newTodoItem && this.$data.newTodoItem.trim() != '') {
+        this.$emit('addTodo', this.$data.newTodoItem); // 부모 컴포넌트 이벤트 발생
+
+        //input 태그에 값을 초기화
+        this.$data.newTodoItem = '';
+      }
     },
   },
   components: {

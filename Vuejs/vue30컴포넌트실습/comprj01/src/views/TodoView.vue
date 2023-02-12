@@ -66,16 +66,28 @@ export default {
       this.$data.todoItems = [];
     },
     addTodo(e) {
-      console.log(e.target);
       debugger;
+      console.log(e.target);
     },
-    doneToggle(e) {
-      console.log(e.target);
+    doneToggle(id) {
       debugger;
+      console.log(id);
+
+      // 복제 후 할당.
+      // 1. 배열 복제
+      const newTodos = this.$data.todoItems.map((item) => {
+        debugger;
+        if (item.id === id) {
+          item.done = !item.done;
+        }
+        return item;
+      });
+      // 2. 할당
+      this.$data.todoItems = newTodos;
     },
     removeTodo(e) {
-      console.log(e.target);
       debugger;
+      console.log(e.target);
     },
   },
   components: {

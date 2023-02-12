@@ -89,6 +89,8 @@ export default {
     doneToggle(id) {
       console.log(id);
       debugger;
+      // 부모 컴포넌트에 이벤트 발산
+      this.$emit('doneToggle', id);
     },
     removeTodo(id) {
       console.log(id);
