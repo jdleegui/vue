@@ -79,13 +79,15 @@
   ReactDOM.render(<Loop4 />, document.getElementById('wrap4'));
   function Loop4({ ...props }) {
     const [elements, setElements] = useState(['one', 'two', 'three']); // 상태값이 기본타입인 경우
+
     const lis = elements.map((value, index, array) => {
       return (<li key={index}>{value}</li>)
     });
+
     return (
       <div>
         {lis}
       </div>
-    )
+    );
   }
 </script>
