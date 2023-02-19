@@ -84,7 +84,6 @@ const [arr, setArr] = useState([1, 2, 3, 4, 5]);
   </body>
 </html>
 
-
 <script src="https://unpkg.com/@babel/standalone/babel.js"
   crossorigin="anonymous">
     /* 자바스크립트로 컴파일러. ES6-->ES5, JSX-- > ES5 * /
@@ -164,9 +163,10 @@ const [arr, setArr] = useState([1, 2, 3, 4, 5]);
       // 복제 ==> 새로운 배열 만들기
       const newArr = arr.filter((value, index, array) => {
         // index === 0 || index === 1 이면 false 반환
+        // 아니면 true 반환
         if (index <= 1)
           return false;
-        // 아니면 true 반환
+
         return true;
       });
       // 할당(대입)
