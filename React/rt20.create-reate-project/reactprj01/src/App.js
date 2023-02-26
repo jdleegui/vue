@@ -1,31 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
-import CompStyle from './src/containers/styled/CompStyle';
+import PageHome from './pages/PageHome';
 
 function App() {
   return (
     <div>
-      <CompStyle></CompStyle>
+      <PageHome></PageHome>
     </div>
   );
 }
-// function App() {
-//   return (
-//     <div>
-//       <CompStyle></CompStyle>
-//     </div>
-//     // <div className="App">
-//     //   <header className="App-header">
-//     //     <img src={logo} className="App-logo" alt="logo" />
-//     //     <p>
-//     //       Edit <code>src/App.js</code> and save to reload.
-//     //     </p>
-//     //     <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-//     //       Learn React
-//     //     </a>
-//     //   </header>
-//     // </div>
-//   );
-// }
 
 export default App;
